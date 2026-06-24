@@ -62,7 +62,12 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 """)
     elif text == "📝 Домашнее задание":
         await update.message.reply_text("Актуальное домашнее задание по математике №952, №953")
-    elif text == "🔗 Кунделик":
+    elif text == "📝 Домашнее задание":
+    await update.message.reply_text(
+        "Актуальное домашнее задание по математике №952, №953"
+    )
+
+elif text == "🔗 Кунделик":
     inline_keyboard = [
         [
             InlineKeyboardButton(
@@ -78,8 +83,9 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "Для перехода в Кунделик нажмите кнопку ниже:",
         reply_markup=inline_markup
     )
-    elif text == "👤 Контакты учителя":
-        await update.message.reply_text("Контакты учителя...")
+
+elif text == "👤 Контакты учителя":
+    await update.message.reply_text("Контакты учителя...")
 
 
 # Настройка и запуск приложения
