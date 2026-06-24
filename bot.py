@@ -7,7 +7,7 @@ TOKEN = os.getenv("BOT_TOKEN")
 # Ссылка на вашу Google Форму (или любую другую форму)
 # Замените этот URL на реальную ссылку для заполнения родителями
 FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdtg2O-cQt91zmbEJe18PSeK--9ClWZ-dgAEvSNc1cKAmD8_Q/viewform?usp=header"
-KUNDELIK_URL = "KUNDELIK_URL = "https://kundelik.kz""
+KUNDELIK_URL = "https://kundelik.kz"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Главное меню бота (обычные кнопки внизу экрана)
@@ -45,18 +45,21 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # Здесь вы можете обрабатывать остальные ваши кнопки
     elif text == "📋 Расписание уроков":
-        await update.message.reply_text("Вот расписание уроков
-        Понедельник 
-        Математика
-        История Каз.
-        Физ-ра
-        Русс. яз.
-        
-        Вторник 
-        Русс. лит-ра
-        Математика
-        История
-        Худ труд")
+        await update.message.reply_text("""
+Вот расписание уроков
+
+Понедельник
+Математика
+История Каз.
+Физ-ра
+Русс. яз.
+
+Вторник
+Русс. лит-ра
+Математика
+История
+Худ труд
+""")
     elif text == "📝 Домашнее задание":
         await update.message.reply_text("Актуальное домашнее задание по математике №952, №953")
     elif text == "🔗 Кунделик":
