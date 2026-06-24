@@ -71,6 +71,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             )
         ]
     ]
+
     inline_markup = InlineKeyboardMarkup(inline_keyboard)
 
     await update.message.reply_text(
